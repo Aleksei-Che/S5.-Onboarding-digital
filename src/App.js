@@ -1,23 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState} from 'react';
+import Card from './Card';
+import meditationImg from './assets/img/meditation.svg';
+import programmingImg from './assets/img/programming.svg';
+import timeManagementImg from './assets/img/time_managment.svg';
 
-function App() {
+const App = () => {
+  const tutorialData = [
+    {
+      title: 'Dedica moltes hores',
+      description: 'Un minim de 30 hores a la setmana. Si no tens prou, haurás de dedicar-li més hores. Al principi sembla imposible, pero notarás una millora ràpidament.',
+      bgColor: '#f0f0f0',
+      image: meditationImg,
+    },
+    {
+      title: 'Dedica moltes hores',
+      description: 'Un minim de 30 hores a la setmana. Si no tens prou, haurás de dedicar-li més hores. Al principi sembla imposible, pero notarás una millora ràpidament.',
+      bgColor: '#f0f0f0',
+      image: programmingImg,
+    },
+    {
+      title: 'Dedica moltes hores',
+      description: 'Un minim de 30 hores a la setmana. Si no tens prou, haurás de dedicar-li més hores. Al principi sembla imposible, pero notarás una millora ràpidament.',
+      bgColor: '#f0f0f0',
+      image: timeManagementImg,
+    }
+  ];
+  const [step, setStep] = useState(0);
+  const currentCardData = tutorialData[step];
+  const nextStep = () => {
+    setStep((prevStep) => prevStep + 1);
+  }
+  const prevStep = () => {
+    setStep((prevStep) => Math.max(prevStep - 1, 0));
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Card 
+          title ={currentCardData.title}
+          description={currentCardData.description}
+          bgColor={currentCardData.bgColor}
+          image={currentCardData.image}
+          nextStep={nextStep}
+          prevStep={prevStep}
+          currentStep = {step}
+          totalStep = {tutorialData.length}
+       />
     </div>
   );
 }
