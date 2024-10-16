@@ -1,31 +1,81 @@
 .card {
+    display: flex;
+    flex-direction: column;
     border: 1px solid #ccc;
     border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: white;
     width: 300px;
-    height: 400px;
+    height: 550px;
     transition: transform 0.3s;
+    position: relative;
+    margin: 50px auto 0;
+    padding-bottom: 50px; /* Добавить паддинг снизу для кнопок */
 }
 
-.card img {
+.card-image {
+    flex: 0 0 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img {
     max-width: 100%;
+    max-height: 100%;
     height: auto;
-    border-radius: 5px;
 }
 
-.card-title {
-    font-size: 1rem;
-    margin-bottom: 20px;
+.card-content {
+    flex: 1;
+    padding: 15px;
+    margin-top: 15px;
 }
 
-.card-text {
-    font-size: 1rem;
-    margin-bottom: 20px;
+.card-bottom {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    position: absolute;
+    bottom: 0; /* Разместить контейнер кнопок внизу */
+    right: 10px;
+    align-items: flex-end;
+    width: 100%; /* Растянуть контейнер кнопок */
+    box-sizing: border-box; /* Учитывать паддинги и бордюры */
 }
 
 .button-container {
     display: flex;
+    gap: 10px;
+}
+
+.btn {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-back {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.btn-back:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-next {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-next:hover {
+    background-color: #333;
 }

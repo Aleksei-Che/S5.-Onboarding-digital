@@ -9,19 +9,19 @@ const App = () => {
     {
       title: 'Dedica moltes hores',
       description: 'Un minim de 30 hores a la setmana. Si no tens prou, haurás de dedicar-li més hores. Al principi sembla imposible, pero notarás una millora ràpidament.',
-      bgColor: '#f0f0f0',
+      bgColor: '#4da2aa',
       image: meditationImg,
     },
     {
       title: 'Dedica moltes hores',
       description: 'Un minim de 30 hores a la setmana. Si no tens prou, haurás de dedicar-li més hores. Al principi sembla imposible, pero notarás una millora ràpidament.',
-      bgColor: '#f0f0f0',
+      bgColor: '#d3d4d9',
       image: programmingImg,
     },
     {
       title: 'Dedica moltes hores',
       description: 'Un minim de 30 hores a la setmana. Si no tens prou, haurás de dedicar-li més hores. Al principi sembla imposible, pero notarás una millora ràpidament.',
-      bgColor: '#f0f0f0',
+      bgColor: '#ffd167',
       image: timeManagementImg,
     }
   ];
