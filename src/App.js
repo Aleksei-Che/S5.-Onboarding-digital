@@ -3,25 +3,24 @@ import Card from './Card';
 import meditationImg from './assets/img/meditation.svg';
 import programmingImg from './assets/img/programming.svg';
 import timeManagementImg from './assets/img/time_managment.svg';
-import Indicator from './Indicator';
 
 const App = () => {
   const tutorialData = [
     {
       title: 'Dedica moltes hores',
-      description: 'Un minim de 30 hores a la setmana. Si no tens prou, haurás de dedicar-li més hores. Al principi sembla imposible, pero notarás una millora ràpidament.',
+      description: "Un minim de 30 hores a la setmana. Si no tens prou, haurás de dedicar-li més hores. Al principi sembla imposible, pero notarás una millora ràpidament.",
       bgColor: '#4da2aa',
       image: meditationImg,
     },
     {
-      title: 'Dedica moltes hores',
-      description: 'Un minim de 30 hores a la setmana. Si no tens prou, haurás de dedicar-li més hores. Al principi sembla imposible, pero notarás una millora ràpidament.',
+      title: 'Programa projects propis',
+      description: "Més val 10 hores treballant en projectes propis, que 10 hores mirant tutorials. La motivació i la implicació en el projecte ajudará a accelerar el teu aprenentatge.",
       bgColor: '#d3d4d9',
       image: programmingImg,
     },
     {
-      title: 'Dedica moltes hores',
-      description: 'Un minim de 30 hores a la setmana. Si no tens prou, haurás de dedicar-li més hores. Al principi sembla imposible, pero notarás una millora ràpidament.',
+      title: 'Procura descansar',
+      description: "Descansar bé i desconnectar són vitals. D'aquesta manera reduirás l'estrès i l'ansietat. Milloraràs la teva concentració i consolidaràs el teu aprenentatge",
       bgColor: '#ffd167',
       image: timeManagementImg,
     }
