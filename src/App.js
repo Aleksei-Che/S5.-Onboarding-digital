@@ -3,6 +3,7 @@ import Card from './Card';
 import meditationImg from './assets/img/meditation.svg';
 import programmingImg from './assets/img/programming.svg';
 import timeManagementImg from './assets/img/time_managment.svg';
+import Indicator from './Indicator';
 
 const App = () => {
   const tutorialData = [

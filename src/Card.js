@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.css';
+import Indicator from './Indicator';
 
 const Card = ({ title, description, bgColor, image, nextStep, prevStep, currentStep, totalStep }) => {
     return (
@@ -11,6 +12,7 @@ const Card = ({ title, description, bgColor, image, nextStep, prevStep, currentS
                 <h4 className='card-title'>{title}</h4>
                 <p className='card-text'>{description}</p>
             </div>
+            <Indicator totalStep={totalStep} currentStep={currentStep} />
             <div className="card-bottom">
                 <div className='button-container'>
                     {currentStep > 0 && (
